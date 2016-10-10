@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>AOS - Animate on scroll library</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="dist/aos.css" />
-  </head>
-  <body>
-    <div id="aos-demo" class="aos-all"></div>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="dist/aos.css"/>
+</head>
+<body>
 
-    <script src="dist/aos.js"></script>
-    <script>
-      AOS.init({
+<a href="index.html" style="text-decoration: none;font-size: 20px;font-weight: bold;font-family: 'Adobe Fan Heiti Std B';color: #ff3f6b;" onmouseover="this.style.color='#60BDFF';"onmousedown="this.style.color='#FFB9E0';"onmouseout="this.style.color='#ff3f6b';">
+    返回另一个DEMO
+</a>
+<div id="aos-demo" class="aos-all"></div>
+
+<script src="dist/aos.js"></script>
+<script>
+    AOS.init({
         easing: 'ease-in-out-sine'
-      });
+    });
 
-      setInterval(addItem, 300);
+    setInterval(addItem, 300);
 
-      var itemsCounter = 1;
-      var container = document.getElementById('aos-demo');
+    var itemsCounter = 1;
+    var container = document.getElementById('aos-demo');
 
-      function addItem () {
+    function addItem() {
         if (itemsCounter > 42) return;
         var item = document.createElement('div');
         item.classList.add('aos-item');
@@ -29,7 +33,7 @@
         item.innerHTML = '<div class="aos-item__inner"><h3>' + itemsCounter + '</h3></div>';
         container.appendChild(item);
         itemsCounter++;
-      }
-    </script>
-  </body>
+    }
+</script>
+</body>
 </html>
